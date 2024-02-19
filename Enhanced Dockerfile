@@ -1,0 +1,32 @@
+From python:3.9-slim
+
+Workdir /app
+
+Copy --chown=app:app ./app .
+
+Run pip install --no-cache-dir -r requirements.txt
+&& pip install --no-cache-dir gunicorn
+&& apk add --no-cache libffi-dev musl-dev gcc libc-dev
+&& pip install --no-cache-dir cryptography
+
+Expose 80
+
+Env NAME world
+
+User app
+
+Healthcheck --retries=3 --interval=5s --timeout=3s
+CMD [ "curl", "--fail", "http://localhost/healthz" ] || exit 1
+
+Cmd ["gunicorn", "-b", "0.0.0.0:8000", "app:app"]
+
+This version of the Dockerfile includes the following changes:
+
+Added --chown option to the copy command to ensure that the files are owned by the app user.
+Installed gunicorn as a production-ready WSGI HTTP server.
+Added apk commands to install necessary development libraries for compiling cryptography library.
+Installed cryptography library for secure connections.
+Added a healthcheck command to ensure that the application is healthy and responsive.
+Changed the CMD to start gunicorn instead of python.
+Added User directive to run the command as the app user for security reasons.
+Note: The app:app argument in the gunicorn command assumes that the Flask application object is named app. You should replace it with the appropriate name if you're using a different name for your Flask application object.

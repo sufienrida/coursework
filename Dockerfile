@@ -1,13 +1,18 @@
-From python: 3.9-slim
+# Use Node JS v16.x as base image
+FROM node:latest
 
-workdir /app
+# Create server directory inside image
+WORKDIR /app
 
-copy ./app
+# Copy the source code (src -> /app)
+# node_modules directory is ignored via .dockerignore file
+COPY . .
 
-Run pip install --no-cache-dir -r requirements.txt
+# Install dependencies (inside the container)
+RUN npm install
 
-Expose 80
+# Expose server port
+EXPOSE 3000
 
-ENV NAME world
-
-CMD  ["python", "app.py"]
+# Start server using npm script
+CMD [ "npm", "run", "start" ]

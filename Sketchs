@@ -1,0 +1,81 @@
+Project Scope Sketch:
+_________________________
+- Identify Requirements
+  - Functional and Non-functional
+  - Prioritize if applicable
+- Task Allocation
+- Identify Project Scope
+- Identify Stakeholders
+- Risk Management
+
+Organization Reports:
+_________________________
+Countries:
+- All countries by population (world, continent, region)
+- Top N populated countries (world, continent, region) 
+- N provided by user
+
+Cities:
+- All cities by population (world, continent, region, country, district)
+- Top N populated cities (world, continent, region, country, district) 
+- N provided by user
+
+Capital Cities:
+- All capital cities by population (world, continent, region)
+- Top N populated capital cities (world, continent, region) - N provided by user
+
+Population Reports:
+_________________________
+- Population of continents, regions, countries, cities, districts
+- Population breakdown by living in cities and not living in cities
+- Additional information for:
+  - World population
+  - Continent population
+  - Region population
+  - Country population
+  - District population
+  - City population
+
+Language Report:
+_________________________
+- Number of speakers and percentage of world population for:
+  - Chinese
+  - English
+  - Hindi
+  - Spanish
+  - Arabic
+
+Country Report Columns:
+_________________________
+- Code
+- Name
+- Continent
+- Region
+- Population
+- Capital
+
+City Report Columns:
+_________________________
+- Name
+- Country
+- District
+- Population
+
+Capital City Report Columns:
+_________________________
+- Name
+- Country
+- Population
+
+Population Report:
+_________________________
+- Name of continent/region/country
+- Total population
+- Total population living in cities (with percentage)
+- Total population not living in cities (with percentage)
+
+Additional Functionality:
+_________________________
+- Add new dataset to the database
+- Apply security measures/login credentials
+- Extra relevant functionality in the application

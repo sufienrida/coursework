@@ -1,0 +1,22 @@
+Generate reports for countries:
+Organize countries in the world by population.
+Organize countries in a continent by population.
+Organize countries in a region by population.
+Provide top N populated countries in the world, continent, and region (where N is provided by the user).
+Generate reports for cities:
+Organize cities in the world by population.
+Organize cities in a continent by population.
+Organize cities in a region by population.
+Organize cities in a country by population.
+Organize cities in a district by population.
+Provide top N populated cities in the world, continent, region, country, and district (where N is provided by the user).
+Generate reports for capital cities:
+Organize capital cities in the world by population.
+Organize capital cities in a continent by population.
+Organize capital cities in a region by population.
+Provide top N populated capital cities in the world, continent, and region (where N is provided by the user).
+Generate population reports:
+Provide population information for continents, regions, countries, districts, and cities.
+Include total population and population breakdown (living in cities and not living in cities) with percentages.
+Language statistics:
+Provide the number of speakers for Chinese, English, Hindi, Spanish, and Arabic, sorted from greatest to smallest, including the percentage of the world population.

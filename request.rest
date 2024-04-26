@@ -1,0 +1,22 @@
+GET http://127.0.0.1:3000/users
+
+###
+
+POST http://127.0.0.1:3000/users
+Content-Type: application/json
+
+{
+  "name": "Asad",
+  "password": "Cisco123",
+}
+
+###
+
+POST http://127.0.0.1:3000/users/login
+Content-Type: application/json
+
+{
+  "name": "Asad",
+  "password": "Cisco123",
+  "email": "muzaffaa@roehampton.ac.uk"
+}
